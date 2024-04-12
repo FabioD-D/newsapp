@@ -1,0 +1,1 @@
+export const articleCategories = ["Moda", "Sport", "Elettronica", "Cronaca"];

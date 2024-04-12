@@ -1,0 +1,8 @@
+<h1> Articles List </h1>
+<p> Here you can find a list of all articles in out database. Pick one to get all details</p>
+
+<div *ngFor = "let article of articles">
+    <app-single-article [article]=article></app-single-article>
+</div>
+
+

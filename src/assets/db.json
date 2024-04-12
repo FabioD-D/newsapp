@@ -1,0 +1,84 @@
+{
+  "article": [
+    {
+      "id": "1",
+      "title": "Lorem",
+      "text": "Lorem ipsum sit dolet",
+      "category": "Moda",
+      "author": "user1",
+      "creationDate": "2027-04-01",
+      "editDate": "2023-04-02"
+    },
+    {
+      "id": "2",
+      "title": "Lorem",
+      "text": "Lorem ipsum sit dolet",
+      "category": "Sport",
+      "author": "user1",
+      "creationDate": "2024-04-01",
+      "editDate": "2024-04-02"
+    },
+    {
+      "id": "3",
+      "title": "Lorem",
+      "text": "Lorem ipsum sit dolet",
+      "category": "Elettronica",
+      "author": "user1",
+      "creationDate": "2025-04-01",
+      "editDate": "2025-04-02"
+    },
+    {
+      "id": "4",
+      "title": "Ipsum",
+      "text": "Lorem ipsum sit dolet mon amet",
+      "category": "Moda",
+      "author": "user2",
+      "creationDate": "2030-04-08",
+      "editDate": "2026-04-09"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "username": "prova",
+      "password": "prova",
+      "nomePenna": "J.K. Rowling",
+      "role": "Lettore"
+    },
+    {
+      "id": "2",
+      "username": "Matilde",
+      "password": "Bianchi",
+      "nomePenna": "",
+      "role": "Lettore"
+    },
+    {
+      "id": "3",
+      "username": "Rosario",
+      "password": "Bernardini",
+      "nomePenna": "",
+      "role": "Lettore"
+    },
+    {
+      "id": "4",
+      "username": "Rosa",
+      "password": "Bernardi",
+      "nomePenna": "",
+      "role": "Lettore"
+    },
+    {
+      "id": "5",
+      "username": "Rosaria",
+      "password": "Bernardini",
+      "nomePenna": "",
+      "role": "Lettore"
+    },
+    {
+      "id": "6",
+      "username": "Rosaria",
+      "password": "Bernardini",
+      "nomePenna": "",
+      "role": "Lettore"
+    }
+  ]
+}

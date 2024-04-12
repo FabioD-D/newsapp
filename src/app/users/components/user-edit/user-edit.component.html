@@ -1,0 +1,43 @@
+<div class = "container">
+    <h1> Edit details </h1>
+    <form *ngIf = "user" [formGroup] = "editForm" class = "row">
+        <div class="col-sm-6 mb-2">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Username</mat-label>
+              <input matInput formControlName="username" />
+            </mat-form-field>
+            @if (username.invalid && (username.dirty || username.touched)) {
+              @if (username.hasError('usernameInUse')) {
+                <mat-error>Username already taken</mat-error>
+              }
+            }
+          </div>
+        
+          <div class="col-sm-6 mb-2">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" formControlName="password" />
+            </mat-form-field>
+          </div>
+
+          <div *ngIf="user.role==='Scrittore'" class="col-sm-6 mb-2">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Nome penna</mat-label>
+              <input matInput type="text" formControlName="nomePenna" />
+            </mat-form-field>
+          </div>
+
+
+    </form>
+
+    <mat-label> Category </mat-label>
+          <mat-select [(ngModel)] = "selectedRole">
+        @for (rol of roles; track rol) {
+            <mat-option [value]="rol">{{rol}}</mat-option>
+        }
+    </mat-select>
+      <button mat-flat-button type="button" color="primary" (click)="edit()">
+        Edit user
+      </button>
+      <button mat-flat-button type="button" color="primary" class ="mx-1" [routerLink]="'/users/userdetails'"> Return to details page</button>
+</div>

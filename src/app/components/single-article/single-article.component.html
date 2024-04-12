@@ -1,0 +1,13 @@
+<div class = "card" (click) = "goToDetails()" *ngIf = "article; else elseNoArticle">
+    <h3 class = "card-title"> {{article.title}} </h3>
+    <p> By {{article.author}}</p>
+    <p> {{article.text}} </p>
+    <p> Creation date: {{article.creationDate}}</p>
+    <p> Last Edit date: {{ article.editDate}}</p>
+</div>
+<ng-template #elseNoArticle>
+    <div>
+        <p> No data! </p>
+    </div>
+</ng-template>
+

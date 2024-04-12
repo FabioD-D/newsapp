@@ -1,0 +1,12 @@
+<h1> News detail </h1>
+
+<p> Here are your news detail</p>
+
+<div *ngIf = "article">
+<h2> {{article.title}}</h2>
+<p> News published by <strong>{{article.author}} in {{article.category}} category</strong></p>
+<p> Text: {{article.text}}</p>
+<hr>
+<p> News orignally created on {{article.creationDate}}, last edit on {{article.editDate}}</p>
+</div>
+

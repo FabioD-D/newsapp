@@ -1,0 +1,7 @@
+<h1> Newest 3 articles</h1>
+<p> Here you can find a summary of the latest three articles published on our platform. Enjoy</p>
+
+<div *ngFor = "let article of articles">
+    <app-single-article [article]=article></app-single-article>    
+</div>
+<hr>

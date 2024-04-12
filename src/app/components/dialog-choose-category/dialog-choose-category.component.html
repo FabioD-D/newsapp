@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Choose category</h2>
+<mat-dialog-content>
+  Choose one category from the pulldown
+</mat-dialog-content>
+<mat-form-field>
+    <mat-label> Category </mat-label>
+    <mat-select [(ngModel)] = "selectedCategory">
+        @for (cat of categories; track cat) {
+            <mat-option [value]="cat">{{cat}}</mat-option>
+        }
+    </mat-select>
+</mat-form-field>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>No</button>
+  <button mat-button [mat-dialog-close]="selectedCategory" (click)="viewChosenCategories()" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>

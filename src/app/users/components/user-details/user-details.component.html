@@ -1,0 +1,17 @@
+<div *ngIf="user">
+  <h1> Hi {{user.username}}, just below you can see your details</h1>
+
+  <ul>
+    <li><strong>Username: </strong> {{user.username}}</li>
+    <li><strong>Password: </strong> {{user.password}}</li>
+    <li><strong>Nome penna:</strong>
+        <span *ngIf = "user.nomePenna; else elseBlock"> {{user.nomePenna}}</span>
+        <ng-template #elseBlock> "Not set/You are not a 'Scrittore'"</ng-template>
+    </li>
+    <li><strong>Role: </strong> {{user.role}}</li>
+  </ul>
+</div>
+<div *ngIf ="user">
+    <button color="primary" mat-flat-button (click) = "goToEditUser()"> Edit your details </button>
+    <button [routerLink]="'/users/addarticle'" *ngIf="user.role === 'Scrittore'" color="primary" mat-flat-button class="mx-2">Add article</button>
+</div>
