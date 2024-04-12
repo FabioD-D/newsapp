@@ -1,1 +1,35 @@
-<p>add-article works!</p>
+<div class = "container-xxl">
+    <h1> Add an article </h1>
+    <p>Since you are a writer, you can add an article. Complete this form</p>
+
+    <form [formGroup] = "addArticleForm" class = "row">
+        <div class="col-sm-6 mb-2">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Title</mat-label>
+              <input matInput formControlName="title" />
+            </mat-form-field>
+            <mat-error *ngIf="title.invalid && (title.dirty || title.touched)">
+              <mat-error *ngIf="title.hasError('required')">Title is required</mat-error>
+            </mat-error>
+          </div>
+        
+          <div class="col-sm-6 mb-2">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Text</mat-label>
+              <textarea matInput formControlName="text" rows="10"></textarea>
+            </mat-form-field>
+            <mat-error *ngIf="text.invalid && (text.dirty || text.touched)">
+              <mat-error *ngIf="text.hasError('required')">Text is required</mat-error>
+            </mat-error>
+        </div>         
+    </form>
+    <mat-select [(ngModel)] = "selectedCategory">
+        @for (cat of categories; track cat) {
+            <mat-option [value]="cat">{{cat}}</mat-option>
+        }
+    </mat-select>
+
+    <button mat-flat-button type="button" color="primary" (click)="addArticle()">
+        Add article
+      </button>
+</div>

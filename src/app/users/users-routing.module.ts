@@ -6,6 +6,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { userGuard } from './guards/user.guard';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { AddArticleComponent } from './components/add-article/add-article.component';
+import { checkaddarticleGuard } from './guards/checkaddarticle.guard';
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: 'signin', component: SigninComponent},
   { path: 'userdetails', component: UserDetailsComponent, canActivate: [userGuard]},
   { path: 'useredit', component: UserEditComponent, canActivate: [userGuard]},
-  { path: 'addarticle', component: AddArticleComponent}
+  { path: 'addarticle', component: AddArticleComponent, canActivate: [userGuard, checkaddarticleGuard]}
 ];
 
 @NgModule({
